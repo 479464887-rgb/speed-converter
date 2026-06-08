@@ -36,4 +36,9 @@ select{width:100%;background:var(--bg);border:1px solid var(--border);border-rad
 const toMs={kmh:0.277778,mph:0.44704,ms:1,knot:0.514444,mach:343};
 const units=Object.keys(toMs);
 function conv(){const v=parseFloat(document.getElementById('val').value)||0;const f=document.getElementById('from').value;const ms=v*toMs[f];document.getElementById('results').innerHTML=units.filter(u=>u!==f).map(u=>'<div class="r"><span>'+u+'</span><span class="val">'+(ms/toMs[u]).toFixed(4)+'</span></div>').join('')}conv();
-</script></body></html>
+</script>  <footer style="padding:16px 24px;border-top:1px solid #21262d;text-align:center;font-size:12px;color:#484f58">
+    <a href="https://devkit-tools.xyz" style="color:#58a6ff;text-decoration:none;margin:0 8px">DevKit Tools</a>
+    <a href="https://devkit-tools.xyz/privacy.html" style="color:#58a6ff;text-decoration:none;margin:0 8px">Privacy</a>
+    <a href="https://devkit-tools.xyz/terms.html" style="color:#58a6ff;text-decoration:none;margin:0 8px">Terms</a>
+  </footer>
+</body></html>
