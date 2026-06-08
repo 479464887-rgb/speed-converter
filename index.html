@@ -32,6 +32,7 @@ select{width:100%;background:var(--bg);border:1px solid var(--border);border-rad
 <select id="from" onchange="conv()"><option value="kmh" selected>km/h</option><option value="mph">mph</option><option value="ms">m/s</option><option value="knot">Knots</option><option value="mach">Mach</option></select>
 <div class="results" id="results"></div></div>
 <script>
+'use strict';
 const toMs={kmh:0.277778,mph:0.44704,ms:1,knot:0.514444,mach:343};
 const units=Object.keys(toMs);
 function conv(){const v=parseFloat(document.getElementById('val').value)||0;const f=document.getElementById('from').value;const ms=v*toMs[f];document.getElementById('results').innerHTML=units.filter(u=>u!==f).map(u=>'<div class="r"><span>'+u+'</span><span class="val">'+(ms/toMs[u]).toFixed(4)+'</span></div>').join('')}conv();
